@@ -7,7 +7,7 @@
     padding-top: 76px;
     max-width: calc(100% - 586px); /* ~1174px = 100% - 2*293px */
     width: 100%;
-    margin: 0 auto; /* ✅ Căn giữa */
+    margin: 0 auto; 
     box-sizing: border-box;
 }
 
@@ -19,16 +19,16 @@ header {
     border-bottom: 2px solid #ddd;
     top: 0;
     left: 0;
-    width: 100%;        /* ✅ full màn */
+    width: 100%;  
     z-index: 10;
     box-sizing: border-box;
 }
 
 header .container {
     height: 40.46px;
-    max-width: 1315.42px;  /* ✅ chuẩn mẫu */
-    width: 100%;           /* ✅ co giãn trong max-width */
-    margin: 0;        /* ✅ căn giữa */
+    max-width: 1315.42px; 
+    width: 100%;       
+    margin: 0;   
     padding: 0;
     box-sizing: border-box;
 }
@@ -162,10 +162,10 @@ main {
 .articles-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(6, auto); /* 2 hàng */
-    gap: 64px 28px; /* Giữ nguyên gap */
-    max-width: 636px; /* Tăng max-width cho 3 cột */
-    margin: 0 auto 113px; /* Giữ căn giữa, cách dưới */
+    grid-template-rows: repeat(6, auto); 
+    gap: 64px 28px; 
+    max-width: 636px; 
+    margin: 0 auto 113px; 
     width: 100%;
 }
 
@@ -388,6 +388,7 @@ main {
         font-size: 36px;
         font-weight: 700;
         font-family: 'new-york-extra-large';
+        text-align: center;
     }
 
     .font-4 {
@@ -395,6 +396,7 @@ main {
         font-weight: 400;
         font-size: 16px;
         margin: 0 !important;
+        text-align: center;
     }
 
     .hero .container hr {
