@@ -202,10 +202,10 @@ header {
 
 @font-face {
   font-family: "SF Pro Text";
-  src: url("/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF") format('otf');
+  src: url("fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF") format('otf');
 }
 
 @font-face {
   font-family: "New York Extra Large";
-  src: url("/fonts/new-york-extra-large/NewYorkExtraLargeRegular.otf") format('otf');
+  src: url("fonts/new-york-extra-large/NewYorkExtraLargeRegular.otf") format('otf');
 }
