@@ -1,8 +1,3 @@
-/* .container {
-    max-width: 1000px;
-    margin: 0 auto;
-} */
-
 .hero .container {
     padding-top: 76px;
     max-width: calc(100% - 586px); /* ~1174px = 100% - 2*293px */
@@ -91,54 +86,66 @@ nav a.active::after {
         /* Dịch chuyển gạch chân về bên trái một khoảng bằng 50% chiều rộng của chính nó để căn giữa tuyệt đối */
 }
 
-.font-4 {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.mobile-nav {
-    display: none;    /* Ẩn thanh điều hướng di động */
-}
 /* Hero Section */
 
 .hero-content {
-    margin-bottom: 40px;
-    text-align: center; 
+    text-align: center; /* Căn giữa văn bản */
+    display: flex; /* Sử dụng flexbox để căn giữa */
+    flex-direction: column; /* Xếp các phần tử dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Đảm bảo chiếm toàn bộ container cha */
 }
 
 .hero-content img {
-    width: 100%;
-    max-width: 854px;
+    width: 100%; /* Co giãn theo container */
+    max-width: 854px; /* Giới hạn tối đa */
     height: auto;           
     object-fit: cover;
     border-radius: 8px;
     display: block;
-    margin: 0 auto;
-}
-
-
-
-.hero h1 {
-    font-size: 48px;
-    font-weight: bold;
-    max-width: 600px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    margin: 0 auto; /* Căn giữa hình ảnh */
 }
 
 .hero-title {
-    margin-top: 40px;
-    padding: 0 20px;
+    margin: 40px 20px 0 26px;
     font-weight: bold;
     color: #000;
-    text-align: center;
+    text-align: center; /* Căn giữa văn bản */
     width: 100%;
-    margin-bottom: 20px;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Xếp dọc các phần tử con */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    box-sizing: border-box; /* Đảm bảo padding không vượt ngoài width */
 }
 
-.font-8 {
-    font-size: 55px;
+.hero-title h3 {
+    font-family: "New York Extra Large";
+    font-size: 54px; /* Theo .font-8 */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+    line-height: 1.1em;
+    width: 100%;
 }
+
+.hero-title p {
+    font-family: "SF Mono";
+    font-weight: 400;
+    font-size: 20px; /* Theo .font-8 */
+    text-align: center;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+    line-height: 1.7em;
+    width: 100%;
+    padding: 0 131px;
+}
+
 /* Main Content */
 main {
     background: white;
@@ -153,7 +160,7 @@ main {
 
 .section-title {
     font-size: 50px;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 64px;
     margin-bottom: 39px;
     text-align: center;
@@ -187,19 +194,22 @@ main {
 }
 
 .article-content {
-    padding: 0 20px;
+    padding-left: 21px;
+    padding-right: 21px;
 }
 
 .article-title {
-    font-family: 'SF Pro Display', sans-serif;
+    font-family: 'SF Pro Display';
     font-weight: 500;
     font-size: 22px;
     line-height: 1.2em;
     text-align: center;
     color: #000000;
     max-width: 262px;
-    margin: 0 auto;
+    box-sizing: border-box;
 }
+
+
 /* Footer */
 .scrolling-banner {
     background: #000;
@@ -207,12 +217,11 @@ main {
     white-space: nowrap;
     position: relative;
     width: 100%;
-    padding: 20px 0;
+    padding: 18px 0;
 }
 .scrolling-text {
     display: inline-flex;
     width: max-content;
-    animation: scroll-x 18s linear infinite;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -231,7 +240,7 @@ main {
 /* Footer Main */
 .footer-main {
     background: #000;
-    padding: 60px 0 40px;
+    padding: 87.12px 0 40px 0px;
 }
 
 .footer-content {
@@ -246,16 +255,18 @@ main {
     font-size: 32px;
     font-weight: bold;
     letter-spacing: 3px;
-    margin-bottom: 30px;
+    margin-bottom: 25.58px;
     color: white;
 }
 
 .footer-text {
+    font-family: 'New York Extra Large';
     font-size: 16px;
-    line-height: 1.6;
+    font-weight: 400;
+    line-height: 1.4em;
     color: #ccc;
-    margin-bottom: 40px;
-    max-width: 500px;
+    margin-bottom: 32px;
+    max-width: 488px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -264,7 +275,7 @@ main {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 64px;
     flex-wrap: wrap;
 }
 
@@ -273,7 +284,7 @@ main {
     text-decoration: underline;
     font-size: 14px;
     letter-spacing: 1px;
-    transition: color 0.3s;
+    max-width: 178px;
 }
 
 .social-link:hover {
@@ -281,9 +292,11 @@ main {
 }
 
 .copyright {
+    font-family: "SF Pro Text";
     font-size: 12px;
     color: #fff;
-    line-height: 1.4;
+    line-height: 1.4em;
+    text-align: center;
 }
 
 .desktop-only {
@@ -293,31 +306,67 @@ main {
     display: none;
 }
 
+.mobile-nav {
+    display: none; /* Ẩn trên desktop */
+}
+
+.hamburger-img {
+    width: 24px; /* Kích thước nút */
+    height: 14px;
+}
 /* Responsive */
 @media (max-width: 768px) {
-    header {
-        padding: 12px 0;
+    .mobile-nav {
+        display: block; /* Hiển thị trên mobile */
     }
 
-    header .container {
-        max-width: 100vw;
-        width: 100vw;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+    .nav-links {
+        display: none; /* Ẩn Blog, About, Links, Projects trên mobile */
+    }
+    * {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
-        overflow-x: hidden;
     }
 
-    .container,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .break-mobile {
+        display: block; /* Ngắt dòng trên mobile */
+        margin: 0;
+        height: 0;
+    }
+header {
+    padding: 24px 24px 21px 20px; /* Giữ padding gốc */
+    width: 100%; /* Co giãn theo màn hình */
+    max-width: 100%; /* Loại bỏ giới hạn 375px để responsive */
+    height: auto; /* Chiều cao tự động dựa trên nội dung */
+    box-sizing: border-box; /* Đảm bảo padding không vượt ngoài width */
+}
+
+header .container {
+    height: 20px;
+    width: 100%; /* Co giãn theo header */
+    max-width: 100%; /* Loại bỏ 100vw để tránh tràn */
+    padding-left: 10px; /* Loại bỏ !important để linh hoạt */
+    padding-right: 10px; /* Loại bỏ !important để linh hoạt */
+
+    overflow-x: hidden; /* Giữ để tránh tràn ngang */
+}
+
     .footer-main .container {
         max-width: 100%;
         padding: 0 10px !important;
     }
 
     .hero .container {
-    max-width: 100%;
-    padding: 52px 0px 0 !important; /* ✅ padding-top tránh header, padding ngang giữ layout */
-    box-sizing: border-box;
+        max-width: 100%;
+        padding-top: 52px;
+        box-sizing: border-box;
+        margin: 0 auto; /* Căn giữa container */
     }
 
 
@@ -358,7 +407,8 @@ main {
     }
 
     .logo {
-        font-size: 28px !important;
+        font-size: 20px !important;
+        height: 20px;
         text-align: left;
         width: 100%;
     }
@@ -376,101 +426,140 @@ main {
     }
 
     .hero-title {
-        padding: 0px 20px 0px; /* Padding 10px cho h1 và p */
+        padding: 0 20px;
         margin-top: 32px;
-        margin-bottom: 52px;
-        max-width: 100%;
+        margin-bottom: 52px !important;
+        max-width: 100%; /* Loại min-width cố định */
         text-align: center;
         box-sizing: border-box;
+        width: 100%; /* Đảm bảo co giãn */
+        margin-left: auto;
+        margin-right: auto; /* Căn giữa */
     }
 
-    .font-8 {
+    .hero-title h3 {
         font-size: 36px;
         font-weight: 700;
-        font-family: 'new-york-extra-large';
+        font-family: 'New York Extra Large';
         text-align: center;
+        margin-bottom: 10px; 
+        display: block;
+        max-width: 100%;
+        box-sizing: border-box;
+        line-height: 1.15em;
+        padding-bottom: 14px;
     }
 
-    .font-4 {
+
+    .hero-title p {
+        max-width: 100%;
+        font-size: 16px !important;
         font-family: 'SF mono';
-        font-weight: 400;
-        font-size: 16px;
-        margin: 0 !important;
         text-align: center;
+        padding: 0; 
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        line-height: 170%;
     }
 
     .hero .container hr {
-        width: 100vw !important; /* Full viewport width */
-        max-width: 100%; /* Đảm bảo không vượt viewport */
-        margin: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto;
+        margin-top: 0 !important;
         padding: 0;
         border: 0;
         border-top: 2px solid black; /* Giữ style inline */
         box-sizing: border-box;
     }
+
+
     .section-title {
-        font-size: 28px;
+        font-family: "New York Extra Large";
+        font-size: 32px;
         margin-top: 56px;
         margin-bottom: 29px;
     }
 
-    .articles.container{
+.article-content {
+    padding-left: 36px; /* Giữ nguyên */
+    padding-right: 37px; /* Giữ nguyên */
+    display: flex; /* Sử dụng flexbox */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc (nếu cần) */
+    text-align: center; /* Căn giữa văn bản con */
+    box-sizing: border-box; /* Đảm bảo padding không vượt ngoài width */
+    width: 100%; /* Đảm bảo chiếm toàn bộ container cha */
+}
+    .articles .container{
         max-width: 100%;
-        padding: 0 20px;
+        margin: 0 auto;
+        padding: 0px 20px 0px 20px;
     }
 
     .articles-grid {
         display: grid;
         grid-template-columns: 1fr; 
         gap: 42px;
-        margin-top: 0px;
+        margin-top: 0px auto;
+        margin-bottom: 82px;
+        width: 100%;
     }
 
     .article-image {
         height: auto;
     }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    text-align: center; /* Căn giữa văn bản con */
+    width: 100%;
+}
     .footer-main {
-        padding: 30px 0 20px;
+        padding: 103.41px 0 32px;
     }
 
     .footer-title {
         font-size: 22px;
-        margin-bottom: 18px;
+        margin-bottom: 25.41px;
     }
 
     .footer-text {
         font-size: 13px;
-        margin-bottom: 20px;
+        margin-bottom: 32px;
     }
 
     .social-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 64px;
         align-items: center;
     }
 
     .copyright {
-        font-size: 10px;
+        font-size: 12px;
+        max-width: 178px; /* Giới hạn chiều rộng tối đa */
+        width: auto; /* Cho phép co giãn tự nhiên, không chiếm 100% */
+        margin: 0 auto; /* Căn giữa theo chiều ngang, lề dưới 32px */
+        text-align: center; /* Căn giữa văn bản bên trong */
+        display: block; /* Giữ nguyên hiển thị khối */
+        box-sizing: border-box; /* Đảm bảo padding/margin không làm tăng kích thước */
     }
 
     .scrolling-banner {
-        padding-top: 10px !important;
+        padding-top: 22px;
+        padding-bottom: 0px;
     }
 
     .scrolling-text {
         font-size: 14px;
+        height: 28px;
     }
 
-    .hero-title p {
-        max-width: 60%;
-        font-size: 12px !important;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
     .articles-grid .article-card {
         display: none; /* Ẩn tất cả article-card trước */
     }
@@ -480,20 +569,22 @@ main {
     .articles-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-        margin-top: 40px;
+        margin-top: 0px;
     }
 }
 
 @font-face {
-    font-family: 'new-york-extra-large'; /* Tên tùy chọn cho font */
-    src: url('/fonts/new-york-extra-large/NewYorkExtraRegular.otf') format('oft'), /* Ưu tiên woff2 */
-         url('/fonts/new-york-extra-large/NewYorkMediumRegularItalic.otf') format('otf'),    /* Tiếp theo woff */
-         url('/fonts/new-york-extra-large/NewYorkSmall-Regular.otf') format('otf'); /* Cuối cùng ttf */
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'New York Extra Large';
+  src: url('/fonts/new-york-extra-large/NewYorkExtraLargeRegular.otf') format('truetype');
 }
+
 
 @font-face {
     font-family: 'SF mono';
-    src: url('/fonts/sf-mono/SFMonoRegular.otf') format('otf');
+    src: url('/fonts/sf-mono/SFMonoRegular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF') format('truetype');
 }
